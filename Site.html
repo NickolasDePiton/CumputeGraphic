@@ -1,5 +1,12 @@
 <html>
 <body>
+		<script>
+				function onClick(event) {
+						//alert('onClick x=' + event.offsetX + ' y=' + event.offsetY);
+						ctx.fillRect(event.offsetX, event.offsetY, 5, 5)
+
+				}
+		</script>
 	<canvas id='Site' height='300' width='300'>
 			<script>
 					var canvas = document.getElementById('Site');	
@@ -16,6 +23,7 @@
 						if (arr[i] == 1)
 							ctx.fillRect(i, i, 1, 1);
 					}
+					canvas.addEventListener('click', onClick);
 			</script>
 	</canvas>
 </body>
